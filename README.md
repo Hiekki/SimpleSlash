@@ -151,9 +151,10 @@
           name: 'amount',
           description: 'How many puppies would you like to see?',
           type: 4, //NumberOption would return `10` here.
-          choices: [],
           required: false,
-          autocomplete: false
+          min_value: undefined,
+          max_value: undefined
+          choices: []
         }
       ],
       type: undefined
