@@ -1,6 +1,6 @@
 {
   "name": "@elenoragroup/simple-slash",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A simple Command Builder for Discord.",
   "main": "dist/commonjs/index.js",
   "module": "dist/esm/index.js",
