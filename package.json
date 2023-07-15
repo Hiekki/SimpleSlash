@@ -1,0 +1,42 @@
+{
+  "name": "@elenoragroup/simple-slash",
+  "version": "1.0.0",
+  "description": "A simple Command Builder for Discord.",
+  "main": "dist/commonjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/esm/index.d.ts",
+  "type": "module",
+  "source": "src/index",
+  "files": [
+    "dist/**/*"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/commonjs/index.js"
+    }
+  },
+  "scripts": {
+    "build": "shx rm -rf -fr dist/* && tsc -p tsconfig.json && tsc -p tsconfig-commonjs.json && shx cp -f package-esm.json ./dist/esm/package.json && shx cp -f package-commonjs.json ./dist/commonjs/package.json",
+    "prepare": "npm run build",
+    "version": "git add -A src",
+    "postversion": "git push && git push --tags",
+    "patch": "npm version patch --force",
+    "minor": "npm version minor --force",
+    "major": "npm version major --force"
+  },
+  "keywords": [
+    "discord",
+    "command",
+    "builder",
+    "elenora",
+    "elenoragroup"
+  ],
+  "author": "Elenora Group",
+  "license": "GPL-3.0-or-later",
+  "devDependencies": {
+    "@types/node": "^20.4.2",
+    "shx": "^0.3.4",
+    "typescript": "^5.1.6"
+  }
+}
