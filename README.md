@@ -132,8 +132,8 @@
         description: string,
         required = false,
         autocomplete = false,
-        min_value?: number, //Optional; Min number of the number to be passed in
-        max_value?: number, //Optional; Max number of the number to be passed in
+        min_value?: number, //Optional; Min value of the number to be passed in
+        max_value?: number, //Optional; Max value of the number to be passed in
         choices?: number[], //Optional; Length must be between 2 and 25.
     )
 ```
@@ -258,54 +258,13 @@
     import SimpleSlash from '@elenoragroup/simple-slash';
 
     // Create the definition for the command
-    const definition = new SimpleSlash('boxes', 'Do things with boxes.')
-        .Subcommand('add', 'Add a new box.', command =>
-            command.StringOption('name', 'What do you want to name this box?')
-        )
-        .Subcommand('remove', 'Remove a box.', command =>
-            command.StringOption('name', 'What box would you like to remove?')
-        )
-        .Subcommand('list', 'List all current boxes.')
+    const definition = new SimpleSlash('boxes', 'Do things with boxes.').Subcommand('list', 'List all current boxes.')
 
     // value of definition
     SimpleSlash {
       name: 'boxes',
       description: 'Do things with boxes.',
       options: [
-        SimpleSlash {
-            name: 'add',
-            description: 'Add a box.',
-            options: [
-                {
-                  name: 'name',
-                  description: 'What do you want to name this box?',
-                  type: 3,
-                  choices: [],
-                  required: false,
-                  autocomplete: false,
-                  min_length: undefined,
-                  max_length: undefined
-                }
-            ],
-            type: 1
-        },
-        SimpleSlash {
-            name: 'remove',
-            description: 'Remove a box.',
-            options: [
-                {
-                  name: 'name',
-                  description: 'What box would you like to remove?',
-                  type: 3,
-                  choices: [],
-                  required: false,
-                  autocomplete: false,
-                  min_length: undefined,
-                  max_length: undefined
-                }
-            ],
-            type: 1
-        },
         SimpleSlash {
             name: 'list',
             description: 'List all current boxes.',
