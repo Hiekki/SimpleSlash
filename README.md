@@ -13,7 +13,7 @@
 # Links
 
 -   [Elenora Support](https://discord.gg/elenora)
--   Documentation: None made yet, you may refer to Examples below.
+-   [Documentation](https://github.com/Elenora-Group/SimpleSlash#readme)
 
 # Examples
 
@@ -38,7 +38,7 @@
 
 ### StringOption
 
-**Parameters of the StringOption**
+**Parameters**
 
 ```ts
     StringOption(
@@ -124,7 +124,7 @@
 
 ### IntegerOption | NumberOption
 
-**Parameters of the IntegerOption | NumberOption**
+**Parameters**
 
 ```ts
     IntegerOption(
@@ -167,7 +167,7 @@
 
 ### ChannelOption
 
-**Parameters of the ChannelOption**
+**Parameters**
 
 ```ts
     ChannelOption(
@@ -206,7 +206,7 @@
 
 ### BooleanOption | UserOption | RoleOption | MentionableOption | AttachmentOption
 
-**Parameters of the BooleanOption | UserOption | RoleOption | MentionableOption | AttachmentOption**
+**Parameters**
 
 ```ts
     UserOption(
@@ -242,7 +242,7 @@
 
 ### Subcommand | SubcommandGroup
 
-**Parameters of the Subcommand | SubcommandGroup**
+**Parameters**
 
 ```ts
     Subcommand(
@@ -315,4 +315,46 @@
       ],
       type: undefined
     }
+```
+
+### Nested Command
+
+```ts
+import SimpleSlash from '@elenoragroup/simple-slash';
+
+const definition = new SimpleSlash('purchase', 'Buy things')
+    .SubcommandGroup('bottoms', 'Pants, shorts, etc.', (command) =>
+        command
+            .Subcommand('pants', 'Buy pants', (command) =>
+                command
+                    .StringOption('type', 'What type of pants would you like to buy?', true, false, ['jeans', 'sweats', 'joggers'])
+                    .StringOption('size', 'What size would you like to buy?', true, false, ['small', 'medium', 'large'])
+                    .StringOption('color', 'What color would you like to buy?', true, false, ['black', 'blue', 'white'])
+                    .IntegerOption('quantity', 'How many would you like to buy?', true, 1, 10),
+            )
+            .Subcommand('shorts', 'Buy shorts', (command) =>
+                command
+                    .StringOption('type', 'What type of shorts would you like to buy?', true, false, ['jeans', 'sweats', 'cargo'])
+                    .StringOption('size', 'What size would you like to buy?', true, false, ['small', 'medium', 'large'])
+                    .StringOption('color', 'What color would you like to buy?', true, false, ['black', 'blue', 'white'])
+                    .IntegerOption('quantity', 'How many would you like to buy?', true, 1, 10),
+            ),
+    )
+    .SubcommandGroup('tops', 'Shirts, jackets, etc.', (command) =>
+        command
+            .Subcommand('shirts', 'Buy shirts', (command) =>
+                command
+                    .StringOption('type', 'What type of shirt would you like to buy?', true, false, ['t-shirt', 'long-sleeve'])
+                    .StringOption('size', 'What size would you like to buy?', true, false, ['small', 'medium', 'large'])
+                    .StringOption('color', 'What color would you like to buy?', true, false, ['black', 'blue', 'white'])
+                    .IntegerOption('quantity', 'How many would you like to buy?', true, 1, 10),
+            )
+            .Subcommand('jackets', 'Buy jackets', (command) =>
+                command
+                    .StringOption('type', 'What type of jacket would you like to buy?', true, false, ['raincoat', 'puffer', 'parka'])
+                    .StringOption('size', 'What size would you like to buy?', true, false, ['small', 'medium', 'large'])
+                    .StringOption('color', 'What color would you like to buy?', true, false, ['black', 'blue', 'white'])
+                    .IntegerOption('quantity', 'How many would you like to buy?', true, 1, 10),
+            ),
+    );
 ```
