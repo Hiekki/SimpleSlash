@@ -13,7 +13,7 @@
 # Links
 
 -   [Elenora Support](https://discord.gg/elenora)
--   Documentation: None made yet, you may refer to Examples above.
+-   Documentation: None made yet, you may refer to Examples below.
 
 # Examples
 
