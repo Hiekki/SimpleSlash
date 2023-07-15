@@ -71,7 +71,9 @@
           type: 3,
           choices: [],
           required: false,
-          autocomplete: false
+          autocomplete: false,
+          min_length: undefined,
+          max_length: undefined
         }
       ],
       type: undefined
@@ -111,7 +113,9 @@
             },
           ],
           required: true,
-          autocomplete: false
+          autocomplete: false,
+          min_length: undefined,
+          max_length: undefined
         }
       ],
       type: undefined
@@ -278,7 +282,9 @@
                   type: 3,
                   choices: [],
                   required: false,
-                  autocomplete: false
+                  autocomplete: false,
+                  min_length: undefined,
+                  max_length: undefined
                 }
             ],
             type: 1
@@ -293,7 +299,9 @@
                   type: 3,
                   choices: [],
                   required: false,
-                  autocomplete: false
+                  autocomplete: false,
+                  min_length: undefined,
+                  max_length: undefined
                 }
             ],
             type: 1
