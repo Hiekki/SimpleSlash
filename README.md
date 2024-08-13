@@ -29,7 +29,7 @@ const definition = new SimpleSlash('ping', 'pong').setCommandType(Constants.Appl
 
 ## Arguments
 
-### StringOption
+### addStringOption
 
 **Parameters**
 
@@ -48,7 +48,7 @@ addStringOption({
 })
 ```
 
-**Base StringOption**
+**Base addStringOption**
 
 ```ts
 import SimpleSlash, { Constants } from '@elenoragroup/simple-slash';
@@ -59,7 +59,7 @@ const definition = new SimpleSlash('stats', "Look up someone's stats")
     .addStringOption({ name: 'name', description: 'The name of the person to look up' });
 ```
 
-**StringOption with Choices** - Choices are automatically lowercased and all spaces replaced with `_` for the value, unless an object is passed in.
+**addStringOption with Choices** - Choices are automatically lowercased and all spaces replaced with `_` for the value, unless an object is passed in.
 
 ```ts
 import SimpleSlash, { Constants } from '@elenoragroup/simple-slash';
@@ -75,7 +75,7 @@ const definition = new SimpleSlash('stats', "Look up someone's stats")
     });
 ```
 
-### IntegerOption | NumberOption
+### addIntegerOption | addNumberOption
 
 **Parameters**
 
@@ -94,7 +94,7 @@ addIntegerOption({
 })
 ```
 
-**Base IntegerOption | NumberOption**
+**Base addIntegerOption | addNumberOption**
 
 ```ts
 import SimpleSlash, { Constants } from '@elenoragroup/simple-slash';
@@ -105,7 +105,7 @@ const definition = new SimpleSlash('stats', "Look up someone's stats")
     .addIntegerOption({ name: 'amount', description: 'How many puppies would you like to see?' });
 ```
 
-### ChannelOption
+### addChannelOption
 
 **Parameters**
 
@@ -118,7 +118,7 @@ addChannelOption(
 )
 ```
 
-**Base ChannelOption**
+**Base addChannelOption**
 
 ```ts
 import SimpleSlash, { Constants } from '@elenoragroup/simple-slash';
@@ -129,7 +129,7 @@ const definition = new SimpleSlash('stats', "Look up someone's stats")
     .addChannelOption('channel_name', 'What channel would you like to set?', true, [Constants.ChannelType.GuildText]);
 ```
 
-### BooleanOption | UserOption | RoleOption | MentionableOption | AttachmentOption
+### addBooleanOption | addUserOption | addRoleOption | addMentionableOption | addAttachmentOption
 
 **Parameters**
 
@@ -152,7 +152,7 @@ const definition = new SimpleSlash('stats', "Look up someone's stats")
     .addUserOption('user', "Who's profile would you like to see?");
 ```
 
-### Subcommand | SubcommandGroup
+### addSubcommand | addSubcommandGroup
 
 **Parameters**
 

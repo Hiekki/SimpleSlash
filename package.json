@@ -1,6 +1,6 @@
 {
     "name": "@elenoragroup/simple-slash",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "description": "A simple Command Builder for Discord.",
     "main": "dist/commonjs/index.js",
     "module": "dist/esm/index.js",
@@ -38,9 +38,9 @@
     "author": "Elenora Group",
     "license": "GPL-3.0-or-later",
     "devDependencies": {
-        "@types/node": "^20.4.2",
+        "@types/node": "^22.2.0",
         "shx": "^0.3.4",
-        "typescript": "^5.1.6"
+        "typescript": "^5.5.4"
     },
     "dependencies": {
         "discord-api-types": "^0.37.93"
