@@ -1,6 +1,6 @@
 {
     "name": "@elenoragroup/simple-slash",
-    "version": "2.0.1",
+    "version": "2.0.2",
     "description": "A simple Command Builder for Discord.",
     "main": "dist/commonjs/index.js",
     "module": "dist/esm/index.js",
@@ -35,6 +35,10 @@
         "discord slash",
         "discord slash command"
     ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Elenora-Group/SimpleSlash.git"
+    },
     "author": "Elenora Group",
     "license": "GPL-3.0-or-later",
     "devDependencies": {
